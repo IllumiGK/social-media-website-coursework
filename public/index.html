@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniBlog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div id="register-section">
+        <h2>Register</h2>
+        <input id="reg-username" placeholder="Username">
+        <input id="reg-password" type="password" placeholder="Password">
+        <button onclick="register()">Register</button>
+        <p id="reg-message"></p>
+    </div>
+
+    <div id="login-section">
+        <h2>Login</h2>
+        <input id="login-username" placeholder="Username">
+        <input id="login-password" type="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="login-message"></p>
+    </div>
+
+    <div id="social-section" style="display:none;">
+        <h2>MiniBlog</h2>
+        <textarea id="post-text" placeholder="What's on your mind?" rows="3"></textarea>
+        <input type="file" id="file-input" accept="image/*">
+        <button onclick="postContent()">Post</button>
+
+        <h3>Search Users</h3>
+        <input id="search-user" placeholder="Search users">
+        <button onclick="searchUsers()">Search</button>
+        <ul id="user-results"></ul>
+
+        <h3>Search Posts</h3>
+        <input id="search-user" placeholder="Search posts">
+        <button onclick="searchUsers()">Search</button>
+        <ul id="user-results"></ul>
+
+        <h3>Your Feed</h3>
+        <ul id="feed"></ul>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

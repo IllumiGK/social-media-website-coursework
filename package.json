@@ -1,0 +1,28 @@
+{
+  "name": "social-media-website-coursework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IllumiGK/social-media-website-coursework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IllumiGK/social-media-website-coursework/issues"
+  },
+  "homepage": "https://github.com/IllumiGK/social-media-website-coursework#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "mongodb": "^7.0.0",
+    "multer": "^2.0.2"
+  }
+}
