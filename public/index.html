@@ -7,44 +7,85 @@
 </head>
 <body>
 <div id="app">
-    <div id="register-section">
-        <h2>Register</h2>
-        <input id="reg-username" placeholder="Username">
-        <input id="reg-password" type="password" placeholder="Password">
-        <button onclick="register()">Register</button>
-        <p id="reg-message"></p>
-    </div>
 
-    <div id="login-section">
-        <h2>Login</h2>
-        <input id="login-username" placeholder="Username">
-        <input id="login-password" type="password" placeholder="Password">
-        <button onclick="login()">Login</button>
-        <p id="login-message"></p>
-    </div>
+    <!-- Top Navigation Bar -->
+    <nav id="top-nav">
+        <div class="nav-left">
+            <h2>MiniBlog</h2>
+        </div>
+        <div class="nav-right">
+            <div id="weather" style="margin-right:10px;">☀️ Loading...</div>
+            <button id="menu-btn" onclick="toggleMenu()" style="display:none;">☰</button>
+            <button id="profile-btn" onclick="showMyProfile()" style="display:none;">My Profile</button>
+        </div>
+    </nav>
 
-    <div id="social-section" style="display:none;">
-        <h2>MiniBlog</h2>
-        <textarea id="post-text" placeholder="What's on your mind?" rows="3"></textarea>
-        <input type="file" id="file-input" accept="image/*">
-        <button onclick="postContent()">Post</button>
-
-        <h3>Search Users</h3>
-        <input id="search-user" placeholder="Search users">
-        <button onclick="searchUsers()">Search</button>
-        <ul id="user-results"></ul>
-
-        <h3>Search Posts</h3>
-        <input id="search-user" placeholder="Search posts">
-        <button onclick="searchUsers()">Search</button>
-        <ul id="user-results"></ul>
-
-        <h3>Your Feed</h3>
-        <ul id="feed"></ul>
-
+    <!-- Side Menu / Toggles -->
+    <div id="side-menu" style="display:none;">
         <button onclick="logout()">Logout</button>
     </div>
+
+    <!-- Register/Login Sections -->
+    <div id="auth-container">
+        <div id="register-section">
+            <h2>Register</h2>
+            <input id="reg-username" placeholder="Username">
+            <input id="reg-password" type="password" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p id="reg-message"></p>
+        </div>
+
+        <div id="login-section">
+            <h2>Login</h2>
+            <input id="login-username" placeholder="Username">
+            <input id="login-password" type="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="login-message"></p>
+        </div>
+    </div>
+
+    <!-- Social Section -->
+    <div id="social-section" style="display:none;">
+        <!-- Post Toggle -->
+        <button onclick="togglePost()">New Post</button>
+        <div id="post-section" style="display:none;">
+            <textarea id="post-text" placeholder="What's on your mind?" rows="3"></textarea>
+            <input type="file" id="file-input" accept="image/*">
+            <button onclick="postContent()">Post</button>
+        </div>
+
+        <!-- Search Toggle -->
+        <button onclick="toggleSearch()">Search</button>
+        <div id="search-section" style="display:none;">
+            <input id="search-input" placeholder="Search users or posts">
+            <button onclick="searchAll()">Search</button>
+
+            <h4>Users</h4>
+            <ul id="search-users-results"></ul>
+
+            <h4>Posts</h4>
+            <ul id="search-posts-results"></ul>
+        </div>
+        
+
+        <!-- Feed -->
+        <h3>Your Feed</h3>
+        <ul id="feed"></ul>
+    </div>
+    <div id="profile-section" style="display:none;">
+        <button id="back-btn" onclick="backToFeed()" style="margin-bottom:10px;">← Back</button>
+        <h2 id="profile-username"></h2>
+        <p>Followers: <span id="profile-followers">0</span></p>
+        <p>Following: <span id="profile-following">0</span></p>
+
+        <div id="profile-posts-section">
+            <h3>Posts</h3>
+            <ul id="profile-posts"></ul>
+        </div>
+    </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
+

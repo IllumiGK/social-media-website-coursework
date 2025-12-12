@@ -1,0 +1,259 @@
+{
+  "info": {
+    "name": "Social Media API - M00867462",
+    "description": "Complete Social Media API with authentication, user management, posts, follow system, and file upload functionality",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "POST Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": "http://localhost:8080/M00867462/login",
+            "description": "Authenticate user and create a new session. Requires username and password in request body."
+          }
+        },
+        {
+          "name": "GET Login Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/M00867462/login",
+            "description": "Check current authentication status and retrieve session information."
+          }
+        },
+        {
+          "name": "DELETE Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/M00867462/login",
+            "description": "Logout user and terminate the current session."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "POST Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"newuser\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": "http://localhost:8080/M00867462/users",
+            "description": "Register a new user account with username and password."
+          }
+        },
+        {
+          "name": "GET Search Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/M00867462/users?q=test",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["M00867462", "users"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "test"
+                }
+              ]
+            },
+            "description": "Search for users by username using the query parameter."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Posts (Contents)",
+      "item": [
+        {
+          "name": "POST Create Post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"This is my first post!\",\n  \"filePath\": \"/uploads/image.jpg\"\n}"
+            },
+            "url": "http://localhost:8080/M00867462/contents",
+            "description": "Create a new post with text content and optional file path for media attachments."
+          }
+        },
+        {
+          "name": "GET Search Posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/M00867462/contents?q=post",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["M00867462", "contents"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "post"
+                }
+              ]
+            },
+            "description": "Search for posts by text content using the query parameter."
+          }
+        },
+        {
+          "name": "GET Feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/M00867462/feed",
+            "description": "Retrieve personalized feed showing posts from users you follow."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Follow System",
+      "item": [
+        {
+          "name": "POST Follow User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"followingId\": \"USER_ID_HERE\"\n}"
+            },
+            "url": "http://localhost:8080/M00867462/follow",
+            "description": "Follow another user by providing their user ID in the request body."
+          }
+        },
+        {
+          "name": "DELETE Unfollow User",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"followingId\": \"USER_ID_HERE\"\n}"
+            },
+            "url": "http://localhost:8080/M00867462/follow",
+            "description": "Unfollow a user by providing their user ID in the request body."
+          }
+        },
+        {
+          "name": "GET Followers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/M00867462/followers?userId=USER_ID_HERE",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["M00867462", "followers"],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "USER_ID_HERE"
+                }
+              ]
+            },
+            "description": "Get list of users who follow the specified user."
+          }
+        },
+        {
+          "name": "GET Following",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/M00867462/following?userId=USER_ID_HERE",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["M00867462", "following"],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "USER_ID_HERE"
+                }
+              ]
+            },
+            "description": "Get list of users that the specified user is following."
+          }
+        }
+      ]
+    },
+    {
+      "name": "File Upload",
+      "item": [
+        {
+          "name": "POST Upload File",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": "http://localhost:8080/M00867462/upload",
+            "description": "Upload a file using multipart form-data. Select a file in the 'file' field to upload media content."
+          }
+        }
+      ]
+    }
+  ]
+}

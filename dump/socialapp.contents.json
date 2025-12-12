@@ -1,0 +1,94 @@
+[{
+  "_id": {
+    "$oid": "693136fd89c264b6debae663"
+  },
+  "userId": "6931367889c264b6debae662",
+  "text": "Hello everyone!",
+  "timestamp": {
+    "$date": "2025-12-04T07:23:41.352Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69325e3589c264b6debae664"
+  },
+  "userId": "692f0a0089c264b6debae661",
+  "text": "What's up dog",
+  "timestamp": {
+    "$date": "2025-12-05T04:23:17.638Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69327eaf75666d67e0a13b9f"
+  },
+  "userId": "6931367889c264b6debae662",
+  "text": "Yo dog what you doing right now?",
+  "timestamp": {
+    "$date": "2025-12-05T06:41:51.651Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69327eef75666d67e0a13ba0"
+  },
+  "userId": "692f0a0089c264b6debae661",
+  "text": "nothing",
+  "timestamp": {
+    "$date": "2025-12-05T06:42:55.122Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69328737a961b9a1a90dd624"
+  },
+  "userId": "692f0a0089c264b6debae661",
+  "text": "doing data analytics",
+  "timestamp": {
+    "$date": "2025-12-05T07:18:15.395Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69328899232cab70aec26dba"
+  },
+  "userId": "692f0a0089c264b6debae661",
+  "text": "The data..",
+  "imagePath": "/uploads/M00867462/1764919448253-survival-by-Age&Familysize.png",
+  "timestamp": {
+    "$date": "2025-12-05T07:24:09.662Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69328a8221984452ffb9b710"
+  },
+  "userId": "692f0a0089c264b6debae661",
+  "text": "I am very hungry",
+  "filePath": "/uploads/M00867462/1764919938827-survival-by-Age&Sex.png",
+  "timestamp": {
+    "$date": "2025-12-05T07:32:18.833Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693b0259ace77e253d3cc222"
+  },
+  "userId": "6931367889c264b6debae662",
+  "text": "trip to paris next week. brought my camera with me so i will take some pictures.",
+  "filePath": "/uploads/M00867462/1765474905325-Arcade - Space Invaders - Miscellaneous - Game Graphics and Color Overlays (1).png",
+  "timestamp": {
+    "$date": "2025-12-11T17:41:45.335Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693c19179c8f88dabe1daa65"
+  },
+  "userId": "6931367889c264b6debae662",
+  "text": "social media here.",
+  "filePath": "",
+  "timestamp": {
+    "$date": "2025-12-12T13:31:03.171Z"
+  }
+}]

@@ -27,3 +27,19 @@ router.delete('/follow', async (req, res) => {
 });
 
 module.exports = router;
+
+// GET followers of a user
+router.get('/followers', async (req,res)=>{
+    const db = getDB();
+    const userId = req.query.userId;
+    const followers = await db.collection('follows').find({ followingId: userId }).toArray();
+    res.json(followers);
+});
+
+// GET following of a user
+router.get('/following', async (req,res)=>{
+    const db = getDB();
+    const userId = req.query.userId;
+    const following = await db.collection('follows').find({ followerId: userId }).toArray();
+    res.json(following);
+});
