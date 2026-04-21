@@ -52,3 +52,11 @@ Built as a coursework project to demonstrate full-stack fundamentals, including 
 
 1. Install Node.js
 2. Run backend server using:
+   - node server.js
+3. Open frontend in browser
+
+---
+
+## 📌 Status
+
+Completed coursework project (First-class graded).
